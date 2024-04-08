@@ -1,0 +1,5 @@
+SET(CMAKE_SYSTEM_NAME Linux)
+
+SET(ANDROID_SDK_ROOT /home/cpp/Android/Sdk)
+SET(ANDROID_NDK_ROOT ${ANDROID_SDK_ROOT}/ndk/25.1.8937393)
+SET(COMPILER_ROOT ${ANDROID_NDK_ROOT}/toolchains/llvm/prebuilt/linux-x86_64/bin)
