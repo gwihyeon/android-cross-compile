@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.11)
+
+project(Hello-World)
+
+SET(OUTPUT ${CMAKE_PROJECT_NAME})
+
+IF(DEFINED TARGET)
+	SET(OUTPUT ${OUTPUT}-${TARGET})
+ELSE()
+	SET(OUTPUT ${OUTPUT}-x86_64)
+ENDIF()
+	
+SET(SOURCE Hello-World.c)
+
+ADD_EXECUTABLE(${OUTPUT} ${SOURCE})
