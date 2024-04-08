@@ -21,3 +21,6 @@ chmod +x aarch64.sh
 ./armv7a.sh
 ./aarch64.sh
 ```
+
+#### 참고
+https://lablk.blogspot.com/2017/10/build-system-cmake-x8664-linux-arm-linux.html
