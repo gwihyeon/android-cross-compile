@@ -3,8 +3,8 @@
 ```
 sudo apt install cmake
 ```
-
-# CMAKE는 기본을 x86_64.cmake로 두고 armv7a와 aarch64에서 x86_64.cmake를 불러와서 기본 경로를 사용한다.
+### CMake
+CMAKE는 기본을 x86_64.cmake로 두고 armv7a와 aarch64에서 x86_64.cmake를 불러와서 기본 경로를 사용한다.  
 Cmake를 통해 Makefile을 만들 때는 ToolChain을 사용하여 생성한다.
 ```
 cmake -DCMAKE_TOOLCHAIN_FILE=cmake_toolchain/aarch64.cmake
