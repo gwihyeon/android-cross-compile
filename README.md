@@ -13,13 +13,13 @@ cmake -DCMAKE_TOOLCHAIN_FILE=cmake_toolchain/aarch64.cmake
 
 Shell Script를 통해 컴파일부터 파일 정리까지
 ```
-chmod +x x86_64.sh
-chmod +x armv7a.sh
-chmod +x aarch64.sh
+chmod +x cross-compile.sh
 
-./x86_64.sh
-./armv7a.sh
-./aarch64.sh
+./cross-compile.sh [파일명].c [아키텍처명]
+Example
+1) ./cross-compile.sh Hello-World.c aarch64
+2) ./cross-compile.sh Hello-World.c armv7a
+3) ./cross-compile.sh Hello-World.c x86_64
 ```
 
 #### 참고
