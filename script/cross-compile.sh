@@ -28,3 +28,11 @@ fi
 echo "빌드 완료"
 rm -rf CMakeCache.txt CMakeFiles cmake_install.cmake Makefile
 echo "정리 완료"
+
+if [ "$target_name" == "armv7a" ] || [ "$target_name" == "aarch64" ] ; then
+    if ! termux-elf-cleaner --api-level 23 "$output_name.$target_name" ; then
+        echo "termux-elf-cleaner 오류"
+    else
+        echo "termux-elf-cleaner 완료"
+    fi
+fi
