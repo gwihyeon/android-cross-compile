@@ -17,3 +17,7 @@ cd /home/kali/android-cross-compile
 
 adb push interface-list.aarch64 /data/local/tmp
 ```
+
+
+mkshrc 수정
+https://gilgil.gitlab.io/2020/11/16/1.html
