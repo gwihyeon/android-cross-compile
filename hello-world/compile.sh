@@ -15,7 +15,7 @@ if [ -z "$target_name" ]; then
 fi
 
 
-if ! cmake -DSOURCE_FILE_NAME="$source_name" -DOUTPUT_FILE_NAME="$output_name" -DCMAKE_TOOLCHAIN_FILE=./toolchain/"$target_name".cmake .; then
+if ! cmake -DINPUT_FILE_NAME="$source_name" -DOUTPUT_FILE_NAME="$output_name" -DCMAKE_TOOLCHAIN_FILE=./toolchain/"$target_name".cmake .; then
     echo "CMake 오류"
     exit 1
 fi
@@ -36,3 +36,9 @@ if [ "$target_name" == "arm32" ] || [ "$target_name" == "arm64" ] ; then
         echo "termux-elf-cleaner 완료"
     fi
 fi
+
+if ! adb push "$output_name.$target_name" /data/local/tmp; then
+    echo "adb push 실패"
+    exit 1
+fi
+echo "adb push 완료"
