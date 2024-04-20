@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.29)
+
+project(example)
+
+set(INPUT_FILE_NAME example.c CACHE STRING "INPUT FILE NAME")
+set(OUTPUT_FILE_NAME exmale CACHE STRING "OUTPUT FILE NAME")
+
+if(DEFINED CMAKE_ANDROID_ARCH_ABI)
+	set(OUTPUT_FILE_NAME ${OUTPUT_FILE_NAME}.${ARCH})
+else()
+	set(OUTPUT_FILE_NAME ${OUTPUT_FILE_NAME}.x86_64)
+endif()
+
+
+add_executable(${OUTPUT_FILE_NAME} ${INPUT_FILE_NAME})
