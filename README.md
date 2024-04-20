@@ -48,4 +48,5 @@ autoconf
 make
 sudo make install
 ```
+https://github.com/termux/termux-elf-cleaner
 ![elf_warning](./image/elf_warning.png)
