@@ -1,5 +1,5 @@
+# [How to Use]
 ```
-[How to Use]
 chmod +x compile.sh
 
 ./comiple.sh hello-world.c arm32
