@@ -50,3 +50,8 @@ sudo make install
 ```
 https://github.com/termux/termux-elf-cleaner
 ![elf_warning](./image/elf_warning.png)
+
+
+*****
+
+https://gilgil.gitlab.io/2020/11/16/1.html
