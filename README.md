@@ -33,3 +33,19 @@ sudo apt update
 sudo apt install scrcpy
 ```
 https://github.com/Genymobile/scrcpy?tab=readme-ov-file
+## D. termux-elf-cleaner
+```
+sudo apt update
+sudo apt install automake
+
+git clone https://github.com/termux/termux-elf-cleaner.git
+cd termux-elf-cleaner
+git checkout v2.2.1           # latest release version
+aclocal                       # create aclocal.m4 and autom4te.cache/
+automake --force-missing --add-missing
+autoconf
+./configure
+make
+sudo make install
+```
+![elf_warning](./image/elf_warning.png)
