@@ -1,26 +1,35 @@
 # android-cross-compile
 
+## 환경 구성
+### A. JDK 설치
 ```
-sudo apt install cmake
+[JDK 설치]
+$ sudo apt update  
+$ sudo apt install openjdk-17-jdk
 ```
-### CMake
-CMAKE는 기본을 x86_64.cmake로 두고 armv7a와 aarch64에서 x86_64.cmake를 불러와서 기본 경로를 사용한다.  
-Cmake를 통해 Makefile을 만들 때는 ToolChain을 사용하여 생성한다.
+*****
+### B. Qt Creator 설치 및 환경 구성
 ```
-cmake -DCMAKE_TOOLCHAIN_FILE=cmake_toolchain/aarch64.cmake
+[Qt Creator 설치]  
+1. https://download.qt.io -> official_releases -> online_installers -> qt-unified-linux-x64-online.run 다운로드(ubuntu에 설치)  
+2. 다운로드 받은 qt-unified-linux-x64-online.run에 실행 권한 추가  
+   $ chmod +x qt-unified-linux-x64-online.run
+3. Select Components에서 Qt 6.5.3 버전 선택 후 설치
+   Desktop gcc 64-bit, Android, Additional Libraries만 선택
 ```
-
-
-Shell Script를 통해 컴파일부터 파일 정리까지
+![qt_setup](./image/qt_setup.png)
 ```
-chmod +x cross-compile.sh
-
-./cross-compile.sh [파일명].c [아키텍처명]
-Example
-1) ./cross-compile.sh Hello-World.c aarch64
-2) ./cross-compile.sh Hello-World.c armv7a
-3) ./cross-compile.sh Hello-World.c x86_64
+[Qt Creator Android Compile 환경 구성]
+1. Eidt -> Preferences 선택
+2. Devices -> Android 선택
+3. JDK location에 JDK 경로 설정
+4. Set Up SDK 버튼 클릭하여 ndk 설치 후 경로 설정
 ```
-
-#### 참고
-https://lablk.blogspot.com/2017/10/build-system-cmake-x8664-linux-arm-linux.html
+![qt_android_setup](./image/qt_android_setup)
+*****
+## C. scrcpy 설치
+```
+sudo apt update
+sudo apt install scrcpy
+```
+https://github.com/Genymobile/scrcpy?tab=readme-ov-file
