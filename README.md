@@ -25,7 +25,7 @@ $ sudo apt install openjdk-17-jdk
 3. JDK location에 JDK 경로 설정
 4. Set Up SDK 버튼 클릭하여 ndk 설치 후 경로 설정
 ```
-![qt_android_setup](./image/qt_android_setup)
+![qt_android_setup](./image/qt_android_setup.png)
 *****
 ## C. scrcpy 설치
 ```
