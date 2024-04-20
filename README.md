@@ -17,7 +17,7 @@ $ sudo apt install openjdk-17-jdk
 3. Select Components에서 Qt 6.5.3 버전 선택 후 설치
    Desktop gcc 64-bit, Android, Additional Libraries만 선택
 ```
-![qt_setup](./img/qt_setup.png)
+![qt_setup](./image/qt_setup.png)
 ```
 [Qt Creator Android Compile 환경 구성]
 1. Eidt -> Preferences 선택
@@ -25,7 +25,7 @@ $ sudo apt install openjdk-17-jdk
 3. JDK location에 JDK 경로 설정
 4. Set Up SDK 버튼 클릭하여 ndk 설치 후 경로 설정
 ```
-![qt_android_setup](./img/qt_android_setup)
+![qt_android_setup](./image/qt_android_setup)
 *****
 ## C. scrcpy 설치
 ```
